@@ -22,11 +22,18 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'MattesGroeger/vim-bookmarks'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'elzr/vim-json'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+" Numbers fix for v7.4
+set number
+
+" Backspace fix for v7.4
+set backspace=2
 
 " Colors
 syntax on
