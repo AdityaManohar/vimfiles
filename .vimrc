@@ -51,6 +51,8 @@ set smartcase
 
 " Remap keys
 imap jj <Esc>
+nmap cc :SyntasticToggleMode<CR><ESC>
+nmap ss :NERDTreeToggle<CR><ESC>
 
 " Hightlight Cursor
 set cursorline
