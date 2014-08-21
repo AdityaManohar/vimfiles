@@ -22,6 +22,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'MattesGroeger/vim-bookmarks'
+Plugin 'scrooloose/nerdtree'
+Plugin 'elzr/vim-json'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
