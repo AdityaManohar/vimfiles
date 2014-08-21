@@ -38,6 +38,7 @@ set backspace=2
 
 " Colors
 syntax on
+set background=dark
 colorscheme solarized
 
 " Tabstops and indenting
