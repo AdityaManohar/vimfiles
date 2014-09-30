@@ -59,6 +59,7 @@ set smartcase
 imap jj <Esc>
 nmap cc :SyntasticToggleMode<CR><ESC>
 nmap ss :NERDTreeToggle<CR><ESC>
+imap <C-n> :NumbersToggle<CR>
 
 " Hightlight Cursor
 set cursorline
