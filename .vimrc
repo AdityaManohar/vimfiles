@@ -10,7 +10,6 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'myusuf3/numbers.vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'scrooloose/syntastic'
@@ -37,9 +36,9 @@ set number
 set backspace=2
 
 " Colors
-syntax on
+syntax enable
 set background=dark
-colorscheme solarized
+colorscheme molokai
 
 " Tabstops and indenting
 set tabstop=4
