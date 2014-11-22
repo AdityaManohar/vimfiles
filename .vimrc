@@ -29,16 +29,21 @@ Plugin 'elzr/vim-json'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+setlocal foldmethod=indent
+
 " Numbers fix for v7.4
 set number
 
 " Backspace fix for v7.4
 set backspace=2
 
+" Fugitive vertical diff
+set diffopt+=vertical
+
 " Colors
 syntax enable
 set background=dark
-colorscheme molokai
+let g:hybrid_use_iTerm_colors=1
 
 " Tabstops and indenting
 set tabstop=4
@@ -64,6 +69,9 @@ imap <C-n> :NumbersToggle<CR>
 " Hightlight Cursor
 set cursorline
 
+" Clipboard access
+set clipboard=unnamed
+
 " Mouse control
 set mouse=a
 
@@ -72,7 +80,7 @@ set laststatus=2
 let g:lightline = {
             \ 'active': {
             \   'left': [ [ 'mode', 'paste' ],
-            \             [ 'fugitive', 'filename' ] ]
+            \             [ 'fugitive', 'filename' ]],
             \ },
             \ 'component_function': {
             \   'fugitive': 'MyFugitive',
@@ -128,5 +136,6 @@ let g:syntastic_style_error_symbol="\u2718"
 let g:syntastic_style_warning_symbol="\u26A0"
 let g:syntastic_stl_format='[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
 let g:syntastic_javascript_checkers=["eslint"]
+let g:syntastic_html_checkers=["validator"]
 let g:syntastic_yaml_checkers=["js-yaml"]
 let g:syntastic_coffee_coffeelint_args = "-f ~/.vim/config/coffeelint.json"
