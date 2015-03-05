@@ -24,6 +24,7 @@ Plugin 'MattesGroeger/vim-bookmarks'
 Plugin 'scrooloose/nerdtree'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'elzr/vim-json'
+Plugin 'digitaltoad/vim-jade'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -41,9 +42,9 @@ set backspace=2
 set diffopt+=vertical
 
 " Colors
-syntax enable
+syntax on
 set background=dark
-let g:hybrid_use_iTerm_colors=1
+colorscheme atom-dark-256
 
 " Tabstops and indenting
 set tabstop=4
