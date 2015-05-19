@@ -140,3 +140,7 @@ let g:syntastic_javascript_checkers=["eslint"]
 let g:syntastic_html_checkers=["validator"]
 let g:syntastic_yaml_checkers=["js-yaml"]
 let g:syntastic_coffee_coffeelint_args = "-f ~/.vim/config/coffeelint.json"
+
+" Custom file types
+au BufNewFile,BufRead *.jst set filetype=html
+au BufNewFile,BufRead *.feature,*.story set filetype=cucumber
