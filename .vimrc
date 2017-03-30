@@ -124,7 +124,7 @@ endfunction
 
 function! MyFilename()
     return ('' != MyReadonly() ? MyReadonly() . ' ' : '') .
-                \ ('' != expand('%:t') ? expand('%:t') : '[No Name]') .
+                \ ('' != expand('%') ? expand('%') : '[No Name]') .
                 \ ('' != MyModified() ? ' ' . MyModified() : '')
 endfunction
 
@@ -138,10 +138,12 @@ let g:syntastic_style_error_symbol="\u2718"
 let g:syntastic_style_warning_symbol="\u26A0"
 let g:syntastic_stl_format='[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
 let g:syntastic_javascript_checkers=["eslint"]
+"let g:syntastic_javascript_eslint_args="--no-eslintrc --config ~/.eslintrc"
 let g:syntastic_html_checkers=["validator"]
 let g:syntastic_yaml_checkers=["js-yaml"]
-let g:syntastic_coffee_coffeelint_args = "-f ~/.vim/config/coffeelint.json"
+
 
 " Custom file types
 au BufNewFile,BufRead *.jst set filetype=html
+au BufNewFile,BufRead *.jsx set filetype=javascript
 au BufNewFile,BufRead *.feature,*.story set filetype=cucumber
